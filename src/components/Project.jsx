@@ -1,7 +1,7 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import west from "../assets/images/west.jpg";
-import elegance from "../assets/images/Elegance.png";
+import elegance from "../assets/images/elegance.png";
 import { Pagination, Autoplay } from "swiper/modules";
 
 import "swiper/css";
