@@ -19,14 +19,14 @@ const Project = () => {
     {
       img: west,
       name: "Quizzify",
-      github_link: "https://github.com/aryyan0701/Quizzify",
-      live_link: "https://quizzad.netlify.app/",
+      github_link: "https://github.com/Soe-Myat-Cho/Quizzify",
+      live_link: "https://quizzify-iota.vercel.app/",
     },
     {
       img: west,
       name: "Quizzify",
-      github_link: "https://github.com/aryyan0701/Quizzify",
-      live_link: "https://quizzad.netlify.app/",
+      github_link: "https://github.com/Soe-Myat-Cho/Quizzify",
+      live_link: "https://quizzify-iota.vercel.app/",
     },
   ];
   return (
