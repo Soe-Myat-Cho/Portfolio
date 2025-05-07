@@ -34,7 +34,8 @@ const Hero = () => {
           </h4>
           <p className="md:text-left text-justify max-w-lg text-md mt-4 text-gray-300 leading-6">
             Specialized in building full-stack applications using React, Vue,
-            and Next.js, Node.js, Laravel API development, MySQL, and MongoDB.
+            Next.js, Node.js, Express.js, Laravel API Development, MySQL,
+            Appwrite and MongoDB.
           </p>
           <button className="btn-primary mt-8">
             <a href="#projects">See My Work</a>

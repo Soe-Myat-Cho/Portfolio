@@ -6,9 +6,9 @@ const Navbar = () => {
   const menuLinks = [
     { name: "HOME", link: "#home" },
     { name: "ABOUT", link: "#about" },
-    { name: "SKILLS", link: "#skills" },
     { name: "PROJECTS", link: "#projects" },
     { name: "EDUCATION", link: "#education" },
+    { name: "SKILLS", link: "#skills" },
     { name: "CONTACT", link: "#contact" },
   ];
   useEffect(() => {
@@ -20,7 +20,7 @@ const Navbar = () => {
   return (
     <nav
       className={`fixed w-full left-0 top-0 z-[999] transition-all duration-700 ease-in-out ${
-        sticky ? "bg-white/60 text-gray-900" : "text-white"
+        sticky ? "bg-white/70 text-gray-900" : "text-white"
       }`}
     >
       <div className="flex items-center justify-between">
@@ -32,7 +32,7 @@ const Navbar = () => {
         </div>
         <div
           className={` ${
-            sticky ? "md:bg-white/0 bg-white" : "bg-white"
+            sticky ? "md:bg-gray-100/0 bg-gray-100" : "bg-gray-100"
           } text-gray-900 md:block hidden px-7 py-2 font-medium  rounded-bl-full`}
         >
           <ul className="flex items-center gap-1 py-2 text-lg">

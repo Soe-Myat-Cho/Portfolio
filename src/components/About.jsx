@@ -11,13 +11,14 @@ const About = () => {
           <div className="p-2">
             <div className="text-gray-300 my-3">
               <p className="text-justify leading-7 w-11/12 mx-auto text-xl ">
-                Passionate Full-Stack Developer with a strong foundation and
-                academic excellence. Started as a self-taught developer in 2022
-                and further enhanced my skills by joining NCC Education in 2023.
-                Specialized in building full-stack applications using frontend
-                frameworks like React, Vue, and Next.js, alongside server-side
-                technologies such as Node.js, Laravel API development, MySQL,
-                and MongoDB.
+                Passionate Full-Stack Developer with a strong academic
+                excellence and hand-on projects . Started as a self-taught
+                developer in 2022 and further enhanced my skills by joining NCC
+                Education in 2023. Specialized in building full-stack
+                applications using frontend frameworks like React, Vue, and
+                Next.js, alongside server-side technologies such as Node.js,
+                Express.js, Laravel API development, MySQL, Appwrite and
+                MongoDB.
               </p>
             </div>
           </div>

@@ -1,4 +1,7 @@
 @import "tailwindcss";
+html {
+  @apply scroll-smooth;
+}
 body {
   @apply box-border bg-gray-900 text-gray-100;
 }

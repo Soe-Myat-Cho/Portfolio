@@ -1,7 +1,8 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import west from "../assets/images/west.jpg";
+import west from "../assets/images/quizz.png";
 import elegance from "../assets/images/elegance.png";
+import taylor from "../assets/images/Taylor.png";
 import { Pagination, Autoplay } from "swiper/modules";
 
 import "swiper/css";
@@ -10,27 +11,27 @@ import "swiper/css/pagination";
 const Project = () => {
   const projects = [
     {
-      img: elegance,
-      name: "Ecommerce Platform (Fashion and Accessories) ",
-      github_link: "https://github.com/Soe-Myat-Cho/React-Laravel-project",
-      live_link: "https://vercel-test-nine-kohl.vercel.app/",
+      img: taylor,
+      name: "Taylor Swift Playlist",
+      github_link: "https://github.com/Soe-Myat-Cho/Taylor-s-Play-List",
+      live_link: "https://taylorswift-playlist.vercel.app/",
     },
 
     {
-      img: west,
-      name: "Quizzify",
-      github_link: "https://github.com/Soe-Myat-Cho/Quizzify",
-      live_link: "https://quizzify-iota.vercel.app/",
+      img: elegance,
+      name: "Ecommerce Platform (fully functional) ",
+      github_link: "https://github.com/Soe-Myat-Cho/React-Laravel-project",
+      live_link: "https://vercel-test-nine-kohl.vercel.app/",
     },
     {
       img: west,
-      name: "Quizzify",
+      name: "Quizzify (fully functional) ",
       github_link: "https://github.com/Soe-Myat-Cho/Quizzify",
       live_link: "https://quizzify-iota.vercel.app/",
     },
   ];
   return (
-    <section id="projects" className="py-20 text-white">
+    <section id="projects" className="py-20 items-center text-white">
       <div className="text-center">
         <h3 className="text-4xl font-semibold">
           My <span className="text-cyan-600">Projects</span>
@@ -38,8 +39,8 @@ const Project = () => {
         <p className="text-gray-400 mt-3 text-lg">My Works</p>
       </div>
       <br />
-      <div className="flex max-w-6xl gap-6 px-5 mx-auto items-center relative">
-        <div className="lg:w-12/13 w-full h-full ">
+      <div className="flex justify-center max-w-6xl gap-6 mx-auto items-center relative">
+        <div className="lg:w-11/12 w-full h-full">
           <Swiper
             slidesPerview={1.2}
             spaceBetween={20}
