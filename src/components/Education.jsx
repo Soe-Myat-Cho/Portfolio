@@ -110,8 +110,14 @@ const Education = () => {
                 Grade A in all sections - Reading, Writing, Listening
               </p>
               <p className="text-gray-300 mt-2">
-                I successfully passed the Japanese Language Proficiency Test
-                (JLPT) N4...
+                I passed the JLPT N4 exam with Grade A in all sections—grammar,
+                vocabulary, reading, and listening—demonstrating strong
+                foundational proficiency in the Japanese language. This level
+                certifies that I can understand basic Japanese used in everyday
+                conversations and written texts, including commonly used
+                expressions and sentence structures. My achievement reflects
+                dedication to consistent language practice and a strong
+                understanding of both spoken and written Japanese.
               </p>
             </div>
             <div className="w-full md:w-1/6 flex items-center justify-center">
