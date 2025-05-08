@@ -131,7 +131,53 @@ const Education = () => {
           </div>
         </motion.div>
       </div>
-      <AnimatePresence>
+      <div className="relative border-l-2 border-white ml-40 mt-20">
+        <div className="mb-5 ml-14">
+          <h4 className="text-3xl font-semibold ">IDEA Private High School</h4>
+          <h5 className="text-xl mt-2 text-gray-300">Kyaukpadaung, Mandalay</h5>
+        </div>
+        <motion.div
+          initial={{ opacity: 0, x: -50 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.5 }}
+          viewport={{ once: true }}
+          className="mb-10 ml-14 relative"
+        >
+          {/* Dot on the vertical line */}
+          <div className="absolute w-6 h-6 bg-white rounded-full -left-17 top-2"></div>
+
+          {/* Year on the left side of the line */}
+          <div className="absolute -left-50 top-1 text-lg text-gray-200 font-semibold text-right">
+            2018 - 2019
+          </div>
+
+          {/* Education Info */}
+          <div className="flex flex-col md:flex-row items-start gap-14">
+            <div className="w-full md:w-3/4">
+              <h5 className="text-2xl text-gray-300">
+                Matriculation Examination - Myanmar
+              </h5>
+              <p className="text-lg text-gray-300 mt-2">
+                2 Distinctions in 6 subjects
+              </p>
+              <p className="text-gray-300 mt-2">
+                Mathematics (87 marks)
+                <br />
+                Biology (79 marks)
+              </p>
+            </div>
+            {/* <div className="w-full md:w-1/6 flex items-center justify-center">
+              <img
+                className="w-3/4 h-auto object-cover rounded-md cursor-pointer"
+                src={jlpt}
+                alt=""
+                onClick={() => setSelectedImg(jlpt)}
+              />
+            </div> */}
+          </div>
+        </motion.div>
+      </div>
+      {/* <AnimatePresence>
         {selectedImg && (
           <motion.div
             className="fixed inset-0 bg-gray-900/90 bg-opacity-70 flex items-center justify-center z-50"
@@ -151,7 +197,7 @@ const Education = () => {
             />
           </motion.div>
         )}
-      </AnimatePresence>
+      </AnimatePresence> */}
     </div>
   );
 };

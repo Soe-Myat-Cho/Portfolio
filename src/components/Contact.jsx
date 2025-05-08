@@ -2,6 +2,7 @@ import React from "react";
 const socialMediaLinks = [
   "https://github.com/Soe-Myat-Cho",
   "https://www.linkedin.com/in/soemyat-cho-8b8635352/",
+  "https://web.facebook.com/soe.m.ic",
 ];
 
 const Contact = () => {
@@ -13,7 +14,7 @@ const Contact = () => {
       text: "Bangkok, Thailand",
     },
   ];
-  const social_media = ["logo-github", "logo-linkedin"];
+  const social_media = ["logo-github", "logo-linkedin", "logo-facebook"];
   return (
     <section id="contact" className="py-10 px-3 text-white">
       <div className="text-center mt-8">
