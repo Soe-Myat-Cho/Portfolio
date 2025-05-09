@@ -11,14 +11,14 @@ const Education = () => {
     {
       level: "NCC Level 5 Diploma in Computing",
       year: "2024 - 2025",
-      score: " Achieved Five Distinctions in Six Modules",
+      score: "Achieved Five Distinctions in Six Modules",
       desc: "I recently completed the NCC Level 5 Diploma in Computing with five distinctions out of six modules. This diploma is equivalent to the second year of a UK honours degree in computing. It deepened my knowledge in software engineering, systems analysis, network security, and web technologies. The program also developed my research and critical thinking skills, preparing me for more advanced computing roles and higher education.",
       img: lv5,
     },
     {
-      level: " NCC Level 4 Diploma in Computing",
+      level: "NCC Level 4 Diploma in Computing",
       year: "2023 - 2024",
-      score: "Achieved Distinctions in every Module",
+      score: "Achieved Distinction in every Module",
       desc: "I completed the NCC Level 4 Diploma in Computing with distinction in every module. This diploma is equivalent to the first year of a UK university degree in computing and covered essential areas such as computer systems, software development, database design, networks, and web development. It provided a strong foundation in both theoretical and practical aspects of computing, helping me build solid problem-solving and programming skills.",
       img: lv4,
     },
@@ -177,7 +177,7 @@ const Education = () => {
           </div>
         </motion.div>
       </div>
-      {/* <AnimatePresence>
+      <AnimatePresence>
         {selectedImg && (
           <motion.div
             className="fixed inset-0 bg-gray-900/90 bg-opacity-70 flex items-center justify-center z-50"
@@ -197,7 +197,7 @@ const Education = () => {
             />
           </motion.div>
         )}
-      </AnimatePresence> */}
+      </AnimatePresence>
     </div>
   );
 };

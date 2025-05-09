@@ -12,7 +12,7 @@ const Project = () => {
   const projects = [
     {
       img: taylor,
-      name: "Taylor Swift Playlist",
+      name: "Taylor Swift Playlist (fully functional) ",
       github_link: "https://github.com/Soe-Myat-Cho/Taylor-s-Play-List",
       live_link: "https://taylorswift-playlist.vercel.app/",
     },
