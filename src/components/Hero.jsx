@@ -4,8 +4,16 @@ import Type from "./Type";
 import profile from "../assets/images/profile.jpg";
 import { keyframes } from "@emotion/react";
 
+const socialMediaLinks = [
+  "https://github.com/Soe-Myat-Cho",
+  "https://www.linkedin.com/in/soe-myat-cho-8b8635352/",
+  "https://web.facebook.com/soe.m.ic",
+];
+
 const Hero = () => {
   const contactRef = useRef(null);
+
+  const social_media = ["logo-github", "logo-linkedin", "logo-facebook"];
 
   return (
     <section
@@ -40,6 +48,19 @@ const Hero = () => {
           <button className="btn-primary mt-8">
             <a href="#projects">See My Work</a>
           </button>
+          <div className="mt-8 text-3xl flex items-center md:justify-start justify-center gap-5">
+            {social_media?.map((icon, index) => (
+              <a
+                key={icon}
+                href={socialMediaLinks[index]}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-600 hover:text-white cursor-pointer "
+              >
+                <ion-icon name={icon}></ion-icon>
+              </a>
+            ))}
+          </div>
         </div>
       </div>
       <div ref={contactRef}></div>

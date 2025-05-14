@@ -1,8 +1,10 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import west from "../assets/images/quizz.png";
+import hiking from "../assets/images/hiking.png";
 import elegance from "../assets/images/elegance.png";
 import taylor from "../assets/images/Taylor.png";
+import jobsearch from "../assets/images/job-search.png";
 import { Pagination, Autoplay } from "swiper/modules";
 
 import "swiper/css";
@@ -11,23 +13,29 @@ import "swiper/css/pagination";
 const Project = () => {
   const projects = [
     {
+      img: west,
+      name: "Quizzify (fully functional) ",
+      github_link: "https://github.com/Soe-Myat-Cho/Quizzify",
+      live_link: "https://quizzify-iota.vercel.app/",
+    },
+
+    {
+      img: hiking,
+      name: "Hiking (Static Web) ",
+      github_link: "https://github.com/Soe-Myat-Cho/Hiking",
+      live_link: "https://hikingadventure.netlify.app/",
+    },
+    {
       img: taylor,
       name: "Taylor Swift Playlist (fully functional) ",
       github_link: "https://github.com/Soe-Myat-Cho/Taylor-s-Play-List",
       live_link: "https://taylorswift-playlist.vercel.app/",
     },
-
     {
-      img: elegance,
-      name: "Ecommerce Platform (fully functional) ",
-      github_link: "https://github.com/Soe-Myat-Cho/React-Laravel-project",
-      live_link: "https://vercel-test-nine-kohl.vercel.app/",
-    },
-    {
-      img: west,
-      name: "Quizzify (fully functional) ",
-      github_link: "https://github.com/Soe-Myat-Cho/Quizzify",
-      live_link: "https://quizzify-iota.vercel.app/",
+      img: jobsearch,
+      name: "Job Search Platform (Static Web) ",
+      github_link: "https://github.com/Soe-Myat-Cho/Job-Search-Platform",
+      live_link: "https://jobsearchease.netlify.app/",
     },
   ];
   return (
@@ -89,6 +97,46 @@ const Project = () => {
                 </div>
               </SwiperSlide>
             ))}
+            <SwiperSlide className="pb-12">
+              <div className="h-fit w-full p-4 bg-slate-700 rounded-xl">
+                <a
+                  href="https://vercel-test-nine-kohl.vercel.app/"
+                  target="_blank"
+                >
+                  <img
+                    src={elegance}
+                    alt="Project Screenshot"
+                    className="rounded-lg"
+                  />
+                </a>
+                <h3 className="text-xl my-4">
+                  Ecommerce Platform (React & Laravel API )
+                </h3>
+                <div className="flex gap-3">
+                  <a
+                    href="https://github.com/Soe-Myat-Cho/React-Laravel-project"
+                    target="_blank"
+                    className="text-cyan-600 bg-gray-800 px-2 py-1 inline-block"
+                  >
+                    Github
+                  </a>
+                  <a
+                    href="https://github.com/Soe-Myat-Cho/API"
+                    target="_blank"
+                    className="text-cyan-600 bg-gray-800 px-2 py-1 inline-block"
+                  >
+                    API
+                  </a>
+                  <a
+                    href="https://vercel-test-nine-kohl.vercel.app/"
+                    target="_blank"
+                    className="text-cyan-600 bg-gray-800 px-2 py-1 inline-block"
+                  >
+                    Live
+                  </a>
+                </div>
+              </div>
+            </SwiperSlide>
           </Swiper>
         </div>
       </div>
