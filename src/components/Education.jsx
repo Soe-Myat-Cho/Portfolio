@@ -37,7 +37,7 @@ const Education = () => {
       <div className="relative border-l-2 border-white ml-40 mt-10">
         <div className="mb-5 ml-14">
           <h4 className="text-3xl font-semibold ">
-            BSc (Hons) Computing (Information Systems and Network Systems)
+            BSc (Hons) Computer Science - University of Greenwich
           </h4>
           <h5 className="text-xl mt-2 text-gray-300">KMD College, Yangon</h5>
         </div>
