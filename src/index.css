@@ -46,8 +46,6 @@ textarea {
   }
 }
 
-/* @tailwind utilities;
-
 @layer utilities {
   @keyframes shimmer {
     0% {
@@ -58,45 +56,44 @@ textarea {
     }
   }
 
-  @keyframes shake {
-    0%,
-    100% {
-      transform: translateX(0);
-    }
-    20% {
-      transform: translateX(-2px);
-    }
-    40% {
-      transform: translateX(2px);
-    }
-    60% {
-      transform: translateX(-2px);
-    }
-    80% {
-      transform: translateX(2px);
-    }
-  }
-
   .animate-shimmer {
     animation: shimmer 2s infinite linear;
   }
+}
 
-  .group-hover\:animate-shake:hover {
-    animation: shake 0.4s ease-in-out;
+/* background animation */
+/* @layer utilities {
+  @keyframes gradientShift {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+  .animated-gradient {
+    background: linear-gradient(-45deg, #0f172a, #1e293b, #334155, #0f172a);
+    background-size: 400% 400%;
+    animation: gradientShift 15s ease infinite;
   }
 } */
 
-@layer utilities {
-  @keyframes shimmer {
-    0% {
-      left: -100%;
-    }
-    100% {
-      left: 100%;
-    }
-  }
+#stars {
+  background: transparent
+    url("https://www.transparenttextures.com/patterns/stardust.png") repeat;
+  animation: moveStars 100s linear infinite;
+  opacity: 0.2;
+}
 
-  .animate-shimmer {
-    animation: shimmer 2s infinite linear;
+@keyframes moveStars {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 10000px 10000px;
   }
 }

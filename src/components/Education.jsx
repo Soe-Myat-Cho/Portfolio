@@ -132,6 +132,7 @@ const Education = () => {
         </motion.div>
       </div>
       <div className="relative border-l-2 border-white ml-40 mt-20">
+        <div class="absolute top-0 left-4/5 w-[400px] h-[400px] bg-blue-900 blur-3xl opacity-20 rounded-full z-0"></div>
         <div className="mb-5 ml-14">
           <h4 className="text-3xl font-semibold ">IDEA Private High School</h4>
           <h5 className="text-xl mt-2 text-gray-300">Kyaukpadaung, Mandalay</h5>

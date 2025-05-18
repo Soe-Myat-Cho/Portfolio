@@ -53,7 +53,7 @@ const Skills = () => {
     },
   ];
   return (
-    <section id="skills" className="py-10 bg-gray-800 relative">
+    <section id="skills" className="py-10  relative">
       <div className="mt-8 text-gray-100 text-center">
         <h3 className="text-4xl font-semibold">
           My <span className="text-cyan-600">Skills</span>
@@ -81,6 +81,7 @@ const Skills = () => {
           ))}
         </div>
       </div>
+      <div class="absolute bottom-0 right-4/5 w-[400px] h-[400px] bg-blue-900 blur-3xl opacity-20 rounded-full z-0"></div>
     </section>
   );
 };
