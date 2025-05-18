@@ -45,9 +45,13 @@ const Hero = () => {
             Next.js, Node.js, Express.js, Laravel API Development, MySQL,
             Appwrite and MongoDB.
           </p>
-          <button className="btn-primary mt-8">
-            <a href="#projects">See My Work</a>
+          <button className="relative overflow-hidden mt-8 group text-white font-semibold text-lg px-6 py-3 rounded-full bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-blue-600 hover:to-cyan-600 transition-all duration-300 shadow-lg">
+            <a href="#projects" className="relative z-10">
+              See My Work
+            </a>
+            <span className="absolute left-[-100%] top-0 h-full w-full bg-gradient-to-r from-transparent via-white/40 to-transparent animate-shimmer" />
           </button>
+
           <div className="mt-8 text-3xl flex items-center md:justify-start justify-center gap-5">
             {social_media?.map((icon, index) => (
               <a
