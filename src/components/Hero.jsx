@@ -3,6 +3,7 @@ import React, { useRef } from "react";
 import Type from "./Type";
 import profile from "../assets/images/profile.jpg";
 import { keyframes } from "@emotion/react";
+import { FaGraduationCap } from "react-icons/fa";
 
 const socialMediaLinks = [
   "https://github.com/Soe-Myat-Cho",
@@ -45,9 +46,21 @@ const Hero = () => {
             Next.js, Node.js, Express.js, Laravel API Development, MySQL,
             Appwrite and MongoDB.
           </p>
-          <button className="relative overflow-hidden mt-8 group text-white font-semibold text-lg px-6 py-3 rounded-full bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-blue-600 hover:to-cyan-600 transition-all duration-300 shadow-lg">
+          {/* <button className="relative overflow-hidden mt-8 group text-white font-semibold text-lg px-6 py-3 rounded-full bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-blue-600 hover:to-cyan-600 transition-all duration-300 shadow-lg">
             <a href="#projects" className="relative z-10">
               See My Work
+            </a>
+            <span className="absolute left-[-100%] top-0 h-full w-full bg-gradient-to-r from-transparent via-white/40 to-transparent animate-shimmer" />
+          </button> */}
+          <button className="relative overflow-hidden mt-8 group text-white font-semibold text-lg px-6 py-3 rounded-full bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-blue-600 hover:to-cyan-600 transition-all duration-300 shadow-lg flex items-center gap-2">
+            <FaGraduationCap className="relative z-10 text-xl" />
+            <a
+              href="https://www.gre.ac.uk/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="relative z-10"
+            >
+              University of Greenwich
             </a>
             <span className="absolute left-[-100%] top-0 h-full w-full bg-gradient-to-r from-transparent via-white/40 to-transparent animate-shimmer" />
           </button>
