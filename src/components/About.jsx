@@ -1,5 +1,10 @@
 import React from "react";
 const About = () => {
+  const info = [
+    //{ text: "Years experience", count: "04" },
+    { text: "Completed Projects", count: "10" },
+    { text: "Academic Years", count: "3" },
+  ];
   return (
     <section id="about" className="py-10 text-white">
       <div className="text-center mt-8">
@@ -20,6 +25,17 @@ const About = () => {
                 Express.js, Laravel API development, MySQL, Appwrite and
                 MongoDB.
               </p>
+            </div>
+            <div className="flex mt-10 items-center gap-7">
+              {info.map((content) => (
+                <div key={content.text}>
+                  <h3 className="md:text-4xl text-2xl font-semibold text-white">
+                    {content.count}
+                    <span className="text-cyan-600">+</span>{" "}
+                  </h3>
+                  <span className="md:text-base text-xs">{content.text}</span>
+                </div>
+              ))}
             </div>
           </div>
         </div>

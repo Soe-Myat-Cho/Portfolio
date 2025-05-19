@@ -81,7 +81,7 @@ const Skills = () => {
           ))}
         </div>
       </div>
-      <div class="absolute bottom-0 right-4/5 w-[400px] h-[400px] bg-blue-900 blur-3xl opacity-20 rounded-full z-0"></div>
+      <div className="absolute bottom-0 left-4/5 w-[400px] h-[400px] bg-blue-900 blur-3xl opacity-20 rounded-full z-0"></div>
     </section>
   );
 };

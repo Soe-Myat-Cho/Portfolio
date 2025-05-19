@@ -7,6 +7,8 @@ import Education from "./components/Education";
 import Footer from "./components/Footer";
 import Skills from "./components/Skills";
 import Contact from "./components/Contact";
+import ScrollingRow from "./components/ScrollingRow";
+import EducationTimeline from "./components/Edu";
 
 function App() {
   return (
@@ -15,7 +17,8 @@ function App() {
       <Hero />
       <About />
       <Project />
-      <Education />
+      <EducationTimeline />
+      {/* <Education /> */}
       <Skills />
       <Contact />
       <Footer />
