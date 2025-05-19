@@ -1,6 +1,6 @@
 @import "tailwindcss";
 html {
-  @apply scroll-smooth;
+  @apply scroll-smooth tracking-wider leading-relaxed text-[17px];
 }
 body {
   @apply box-border bg-gray-900 text-gray-100;

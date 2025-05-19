@@ -6,15 +6,15 @@ import { keyframes } from "@emotion/react";
 import { FaGraduationCap } from "react-icons/fa";
 
 const socialMediaLinks = [
-  "https://github.com/Soe-Myat-Cho",
   "https://www.linkedin.com/in/soe-myat-cho-8b8635352/",
+  "https://github.com/Soe-Myat-Cho",
   "https://web.facebook.com/soe.m.ic",
 ];
 
 const Hero = () => {
   const contactRef = useRef(null);
 
-  const social_media = ["logo-github", "logo-linkedin", "logo-facebook"];
+  const social_media = ["logo-linkedin", "logo-github", "logo-facebook"];
 
   return (
     <section

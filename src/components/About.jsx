@@ -14,8 +14,8 @@ const About = () => {
         <p className="text-gray-400 my-3 text-lg">My introduction</p>
         <div className="flex md:flex-row flex-col-reverse items-center md:gap-6 gap-12 px-10 max-w-6xl mx-auto">
           <div className="p-2">
-            <div className="text-gray-300 my-3">
-              <p className="text-justify leading-7 w-11/12 mx-auto text-xl ">
+            <div className="text-gray-100 my-3">
+              <p className="text-justify font-thin leading-9 w-11/12 mx-auto text-xl ">
                 Passionate Full-Stack Developer with a strong academic
                 excellence and hand-on projects . Started as a self-taught
                 developer in 2022 and further enhanced my skills by joining NCC

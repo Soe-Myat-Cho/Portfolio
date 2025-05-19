@@ -120,7 +120,7 @@ const EducationTimeline = () => {
             <motion.img
               src={selectedImg}
               alt="Preview"
-              className="max-w-3xl max-h-[90vh] rounded-lg shadow-lg"
+              className="max-w-3xl max-h-[90vh] rounded-lg mt-15"
               initial={{ scale: 0.8 }}
               animate={{ scale: 1 }}
               exit={{ scale: 0.8 }}
