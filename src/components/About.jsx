@@ -8,7 +8,7 @@ const About = () => {
   return (
     <section id="about" className="py-10 text-white">
       <div className="text-center mt-8">
-        <h3 className="text-4xl font-semibold">
+        <h3 className="text-4xl font-bold">
           About <span className="text-cyan-600">Me</span>
         </h3>
         <p className="text-gray-400 my-3 text-lg">My introduction</p>

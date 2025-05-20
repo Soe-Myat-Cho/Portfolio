@@ -6,6 +6,7 @@ import elegance from "../assets/images/elegance.png";
 import taylor from "../assets/images/Taylor.png";
 import jobsearch from "../assets/images/job-search.png";
 import { Pagination, Autoplay } from "swiper/modules";
+import { motion } from "framer-motion";
 
 import "swiper/css";
 import "swiper/css/pagination";
@@ -41,7 +42,7 @@ const Project = () => {
   return (
     <section id="projects" className="py-20 items-center text-white">
       <div className="text-center">
-        <h3 className="text-4xl font-semibold">
+        <h3 className="text-4xl font-bold">
           My <span className="text-cyan-600">Projects</span>
         </h3>
         <p className="text-gray-400 mt-3 text-lg">My Works</p>
@@ -69,25 +70,77 @@ const Project = () => {
           >
             {projects.map((project_info, i) => (
               <SwiperSlide key={i} className="pb-12">
-                <div className="h-fit w-full p-4 bg-slate-700 rounded-xl">
-                  <a href={project_info.live_link} target="_blank">
+                <motion.div
+                  whileHover={{ scale: 1.03, rotate: 1 }}
+                  transition={{ type: "spring", stiffness: 300 }}
+                  className="p-6 rounded-xl"
+                >
+                  <div className="h-fit w-full p-4 bg-slate-700 rounded-xl shadow-xl hover:shadow-blue-500/50">
+                    <a href={project_info.live_link} target="_blank">
+                      <img
+                        src={project_info.img}
+                        alt=""
+                        className="rounded-lg  "
+                      />
+                    </a>
+                    <h3 className="text-xl my-4">{project_info.name}</h3>
+                    <div className="flex gap-3">
+                      <a
+                        href={project_info.github_link}
+                        target="_blank"
+                        className="text-cyan-600 bg-gray-800 px-2 py-1 inline-block"
+                      >
+                        Github
+                      </a>
+                      <a
+                        href={project_info.live_link}
+                        target="_blank"
+                        className="text-cyan-600 bg-gray-800 px-2 py-1 inline-block"
+                      >
+                        Live
+                      </a>
+                    </div>
+                  </div>
+                </motion.div>
+              </SwiperSlide>
+            ))}
+            <SwiperSlide className="pb-12">
+              <motion.div
+                whileHover={{ scale: 1.03, rotate: 1 }}
+                transition={{ type: "spring", stiffness: 300 }}
+                className="p-6 rounded-xl "
+              >
+                <div className="h-fit w-full p-4 bg-slate-700 rounded-xl shadow-xl hover:shadow-blue-500/50">
+                  <a
+                    href="https://vercel-test-nine-kohl.vercel.app/"
+                    target="_blank"
+                  >
                     <img
-                      src={project_info.img}
-                      alt=""
-                      className="rounded-lg  "
+                      src={elegance}
+                      alt="Project Screenshot"
+                      className="rounded-lg"
                     />
                   </a>
-                  <h3 className="text-xl my-4">{project_info.name}</h3>
+                  <h3 className="text-xl my-4">
+                    Ecommerce Platform (React & Laravel API )
+                  </h3>
                   <div className="flex gap-3">
                     <a
-                      href={project_info.github_link}
+                      href="https://github.com/Soe-Myat-Cho/React-Laravel-project"
                       target="_blank"
                       className="text-cyan-600 bg-gray-800 px-2 py-1 inline-block"
                     >
                       Github
                     </a>
                     <a
-                      href={project_info.live_link}
+                      href="https://github.com/Soe-Myat-Cho/API"
+                      target="_blank"
+                      className="text-cyan-600 bg-gray-800 px-2 py-1 inline-block"
+                    >
+                      API
+                    </a>
+                    <a
+                      href="https://vercel-test-nine-kohl.vercel.app/"
                       target="_blank"
                       className="text-cyan-600 bg-gray-800 px-2 py-1 inline-block"
                     >
@@ -95,47 +148,7 @@ const Project = () => {
                     </a>
                   </div>
                 </div>
-              </SwiperSlide>
-            ))}
-            <SwiperSlide className="pb-12">
-              <div className="h-fit w-full p-4 bg-slate-700 rounded-xl">
-                <a
-                  href="https://vercel-test-nine-kohl.vercel.app/"
-                  target="_blank"
-                >
-                  <img
-                    src={elegance}
-                    alt="Project Screenshot"
-                    className="rounded-lg"
-                  />
-                </a>
-                <h3 className="text-xl my-4">
-                  Ecommerce Platform (React & Laravel API )
-                </h3>
-                <div className="flex gap-3">
-                  <a
-                    href="https://github.com/Soe-Myat-Cho/React-Laravel-project"
-                    target="_blank"
-                    className="text-cyan-600 bg-gray-800 px-2 py-1 inline-block"
-                  >
-                    Github
-                  </a>
-                  <a
-                    href="https://github.com/Soe-Myat-Cho/API"
-                    target="_blank"
-                    className="text-cyan-600 bg-gray-800 px-2 py-1 inline-block"
-                  >
-                    API
-                  </a>
-                  <a
-                    href="https://vercel-test-nine-kohl.vercel.app/"
-                    target="_blank"
-                    className="text-cyan-600 bg-gray-800 px-2 py-1 inline-block"
-                  >
-                    Live
-                  </a>
-                </div>
-              </div>
+              </motion.div>
             </SwiperSlide>
           </Swiper>
         </div>

@@ -97,3 +97,14 @@ textarea {
     background-position: 10000px 10000px;
   }
 }
+
+/* Tailwind must allow these custom classes */
+.outlined-text {
+  -webkit-text-stroke: 1px gray;
+  color: transparent;
+}
+
+.outlined-text-hover:hover {
+  -webkit-text-stroke: 0px;
+  color: lightblue;
+}

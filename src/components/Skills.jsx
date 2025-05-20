@@ -55,7 +55,7 @@ const Skills = () => {
   return (
     <section id="skills" className="py-10  relative">
       <div className="mt-8 text-gray-100 text-center">
-        <h3 className="text-4xl font-semibold">
+        <h3 className="text-4xl font-bold">
           My <span className="text-cyan-600">Skills</span>
         </h3>
         <p className="text-gray-400 mt-3 text-lg">My knowledge</p>

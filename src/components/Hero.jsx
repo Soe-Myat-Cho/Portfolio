@@ -4,6 +4,7 @@ import Type from "./Type";
 import profile from "../assets/images/profile.jpg";
 import { keyframes } from "@emotion/react";
 import { FaGraduationCap } from "react-icons/fa";
+import { motion } from "framer-motion";
 
 const socialMediaLinks = [
   "https://www.linkedin.com/in/soe-myat-cho-8b8635352/",
@@ -21,14 +22,24 @@ const Hero = () => {
       id="home"
       className="min-h-screen flex py-10 md:flex-row flex-col items-center"
     >
-      <div className="flex-1 flex items-center justify-center h-full">
+      <motion.div
+        className="flex-1 flex items-center justify-center h-full"
+        initial={{ opacity: 0, x: -100 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.5, ease: "easeOut" }}
+      >
         <img
           src={profile}
           alt="profile"
           className="md:w-2/4 h-auto object-cover img"
         />
-      </div>
-      <div className="flex-1">
+      </motion.div>
+      <motion.div
+        className="flex-1"
+        initial={{ opacity: 0, x: 100 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.5, ease: "easeOut", delay: 0.5 }}
+      >
         <div className="md:text-left text-center">
           <span className=" font-semibold md:text-4xl text-xl">
             Transform your ideas{" "}
@@ -79,7 +90,7 @@ const Hero = () => {
             ))}
           </div>
         </div>
-      </div>
+      </motion.div>
       <div ref={contactRef}></div>
     </section>
   );
