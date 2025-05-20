@@ -18,7 +18,7 @@ const educationData = [
     title: "BSc (Hons) Computer Science",
     subtitle: "University of Greenwich",
     description:
-      "I am currently attending the BSc (Hons) Computer Science degree offered by the University of Greenwich. This degree is equivalent to the final year of a UK honours degree and builds upon my previous academic qualifications in computing. It is further refining my problem-solving, research, and critical thinking abilities while preparing me for a professional career in the tech industry or postgraduate studies.",
+      "I am currently attending the BSc (Hons) Computer Science degree offered by the University of Greenwich. This degree is equivalent to the final year of a UK honours degree and builds upon my previous academic qualifications in computing.",
   },
   {
     date: "2024 - 2025",
@@ -91,13 +91,22 @@ const EducationTimeline = () => {
               {edu.img && (
                 <div>
                   <h5 className="mt-3 text-gray-300 font-light">
-                    Certificate Preview:
+                    Clike to view certificate
                   </h5>
-                  <img
+                  <motion.img
                     src={edu.img}
                     alt="Education Certificate"
-                    className="mt-2 w-32 h-auto rounded cursor-pointer border border-gray-600"
+                    className="mt-2 w-32 h-auto rounded cursor-pointer border border-gray-600 shadow-lg hover:shadow-blue-500/50 "
                     onClick={() => setSelectedImg(edu.img)}
+                    animate={{
+                      rotate: [0, -5, 5, -5, 5, 0], // slight tilt
+                    }}
+                    transition={{
+                      repeat: Infinity,
+                      repeatDelay: 2,
+                      duration: 1,
+                      ease: "easeInOut",
+                    }}
                   />
                 </div>
               )}

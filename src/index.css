@@ -106,5 +106,6 @@ textarea {
 
 .outlined-text-hover:hover {
   -webkit-text-stroke: 0px;
+  color: #22d3ee;
   color: lightblue;
 }
