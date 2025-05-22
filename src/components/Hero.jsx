@@ -1,8 +1,6 @@
 import React, { useRef } from "react";
-
 import Type from "./Type";
 import profile from "../assets/images/profile.jpg";
-import { keyframes } from "@emotion/react";
 import { FaGraduationCap } from "react-icons/fa";
 import { motion } from "framer-motion";
 
@@ -12,18 +10,19 @@ const socialMediaLinks = [
   "https://web.facebook.com/soe.m.ic",
 ];
 
+const socialMediaIcons = ["logo-linkedin", "logo-github", "logo-facebook"];
+
 const Hero = () => {
   const contactRef = useRef(null);
-
-  const social_media = ["logo-linkedin", "logo-github", "logo-facebook"];
 
   return (
     <section
       id="home"
-      className="min-h-screen flex py-10 md:flex-row flex-col items-center"
+      className="min-h-screen flex flex-col md:flex-row items-center justify-center gap-y-10 gap-x-0 px-5 md:px-20 py-16"
     >
+      {/* Left Side (Image) */}
       <motion.div
-        className="flex-1 flex items-center justify-center h-full"
+        className="flex-1 flex items-center justify-center w-full"
         initial={{ opacity: 0, x: -100 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.5, ease: "easeOut" }}
@@ -31,39 +30,37 @@ const Hero = () => {
         <img
           src={profile}
           alt="profile"
-          className="md:w-2/4 h-auto object-cover img"
+          className="md:w-3/5 md:mr-15 w-2/3 mt-5 h-auto object-cover img"
         />
       </motion.div>
+
+      {/* Right Side (Text Content) */}
       <motion.div
-        className="flex-1"
+        className="flex-1 w-full"
         initial={{ opacity: 0, x: 100 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.5, ease: "easeOut", delay: 0.5 }}
       >
-        <div className="md:text-left text-center">
-          <span className=" font-semibold md:text-4xl text-xl">
+        <div className="text-center md:text-left">
+          <span className="block font-semibold text-[clamp(1.25rem,4vw,2rem)]">
             Transform your ideas{" "}
             <span className="text-cyan-600">into reality</span>
           </span>
-          <h1 className="md:text-5xl text-2xl md:leading-normal leading-10 text-white ">
-            <span className=" font-regular text-cyan-600">with </span>
-            <span className="font-semibold">Soe Myat Cho</span>
+          <h1 className="text-[clamp(2rem,5vw,3rem)] font-bold text-white mt-2 leading-tight">
+            <span className="font-light text-cyan-600">with </span>
+            Soe Myat Cho
           </h1>
-          <h4 className="md:text-2xl text-lg md:leading-normal leading-5 mt-4 font-bold text-gray-300">
+          <h4 className="text-[clamp(1.125rem,3vw,1.75rem)] font-bold text-gray-300 mt-4">
             <Type />
           </h4>
-          <p className="md:text-left text-justify max-w-lg text-md mt-4 text-gray-300 leading-6">
+          <p className="text-gray-300 mt-4 leading-6 max-w-xl mx-auto md:mx-0 text-[clamp(0.9rem,2.5vw,1rem)]">
             Specialized in building full-stack applications using React, Vue,
             Next.js, Node.js, Express.js, Laravel API Development, MySQL,
             Appwrite and MongoDB.
           </p>
-          {/* <button className="relative overflow-hidden mt-8 group text-white font-semibold text-lg px-6 py-3 rounded-full bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-blue-600 hover:to-cyan-600 transition-all duration-300 shadow-lg">
-            <a href="#projects" className="relative z-10">
-              See My Work
-            </a>
-            <span className="absolute left-[-100%] top-0 h-full w-full bg-gradient-to-r from-transparent via-white/40 to-transparent animate-shimmer" />
-          </button> */}
-          <button className="relative overflow-hidden mt-8 group text-white font-semibold text-lg px-6 py-3 rounded-full bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-blue-600 hover:to-cyan-600 transition-all duration-300 shadow-lg flex items-center gap-2">
+
+          {/* University Button */}
+          <button className="relative overflow-hidden mt-8 group text-white font-semibold text-lg px-6 py-3 rounded-full bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-blue-600 hover:to-cyan-600 transition-all duration-300 shadow-lg flex items-center justify-center gap-2 mx-auto md:mx-0">
             <FaGraduationCap className="relative z-10 text-xl" />
             <a
               href="https://www.gre.ac.uk/"
@@ -76,14 +73,15 @@ const Hero = () => {
             <span className="absolute left-[-100%] top-0 h-full w-full bg-gradient-to-r from-transparent via-white/40 to-transparent animate-shimmer" />
           </button>
 
-          <div className="mt-8 text-3xl flex items-center md:justify-start justify-center gap-5">
-            {social_media?.map((icon, index) => (
+          {/* Social Icons */}
+          <div className="mt-8 text-3xl flex justify-center md:justify-start gap-6">
+            {socialMediaIcons.map((icon, index) => (
               <a
                 key={icon}
                 href={socialMediaLinks[index]}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-600 hover:text-white cursor-pointer "
+                className="text-gray-600 hover:text-white transition-colors duration-300"
               >
                 <ion-icon name={icon}></ion-icon>
               </a>
@@ -91,6 +89,7 @@ const Hero = () => {
           </div>
         </div>
       </motion.div>
+
       <div ref={contactRef}></div>
     </section>
   );
