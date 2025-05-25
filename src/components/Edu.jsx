@@ -10,7 +10,6 @@ import { FaGraduationCap } from "react-icons/fa";
 import lv4 from "../assets/images/lv4.jpg";
 import lv5 from "../assets/images/lv5.png";
 import jlpt from "../assets/images/jlpt.jpg";
-import { div } from "framer-motion/client";
 
 const educationData = [
   {
@@ -56,11 +55,14 @@ const EducationTimeline = () => {
   const [selectedImg, setSelectedImg] = useState(null);
 
   return (
-    <div id="education" className=" text-white py-14 px-6">
-      <h3 className="text-4xl text-center font-bold mb-2">
+    <div
+      id="education"
+      className="text-white py-14 px-4 sm:px-6 lg:px-20 max-w-7xl mx-auto"
+    >
+      <h3 className="text-3xl sm:text-4xl text-center font-bold mb-2">
         My <span className="text-cyan-500">Education</span>
       </h3>
-      <p className="text-lg text-center mb-12">
+      <p className="text-base sm:text-lg text-center mb-10 sm:mb-12 text-gray-400">
         Here's a timeline of my academic journey.
       </p>
 
@@ -73,7 +75,6 @@ const EducationTimeline = () => {
               background: "rgba(15, 23, 42, 0.7)",
               color: "#fff",
               boxShadow: "none",
-              borderBottom: "none",
               border: "none",
             }}
             contentArrowStyle={{
@@ -83,23 +84,25 @@ const EducationTimeline = () => {
             icon={<FaGraduationCap />}
           >
             <div>
-              <h3 className="text-2xl font-bold">{edu.title}</h3>
-              <h4 className="text-md mt-1 text-cyan-400">{edu.subtitle}</h4>
-              <h4 className="mt-2 text-md text-gray-300 font-light">
+              <h3 className="text-xl sm:text-2xl font-bold">{edu.title}</h3>
+              <h4 className="text-sm sm:text-md mt-1 text-cyan-400">
+                {edu.subtitle}
+              </h4>
+              <h4 className="mt-2 text-sm sm:text-base text-gray-300 font-light">
                 {edu.description}
               </h4>
               {edu.img && (
                 <div>
-                  <h5 className="mt-3 text-gray-300 font-light">
-                    Clike to view certificate
-                  </h5>
+                  <p className="mt-3 text-gray-300 font-light">
+                    Click to view certificate
+                  </p>
                   <motion.img
                     src={edu.img}
                     alt="Education Certificate"
-                    className="mt-2 w-32 h-auto rounded cursor-pointer border border-gray-600 shadow-lg hover:shadow-blue-500/50 "
+                    className="mt-2 w-24 sm:w-32 h-auto rounded cursor-pointer border border-gray-600 shadow-lg hover:shadow-blue-500/50"
                     onClick={() => setSelectedImg(edu.img)}
                     animate={{
-                      rotate: [0, -5, 5, -5, 5, 0], // slight tilt
+                      rotate: [0, -5, 5, -5, 5, 0],
                     }}
                     transition={{
                       repeat: Infinity,
@@ -113,10 +116,15 @@ const EducationTimeline = () => {
             </div>
           </VerticalTimelineElement>
         ))}
-        <div className="absolute top-0 left-6/7 w-[300px] h-[300px] bg-blue-900 blur-3xl opacity-20 rounded-full z-0"></div>
-        <div className="absolute bottom-60 right-5/6 w-[400px] h-[400px] bg-blue-900 blur-3xl opacity-20 rounded-full z-0"></div>
+
+        {/* Responsive blur backgrounds for larger screens only */}
+        <div className="hidden md:block">
+          <div className="absolute top-0 left-[80%] w-[300px] h-[300px] bg-blue-900 blur-3xl opacity-20 rounded-full z-0"></div>
+          <div className="absolute bottom-60 right-[85%] w-[400px] h-[400px] bg-blue-900 blur-3xl opacity-20 rounded-full z-0"></div>
+        </div>
       </VerticalTimeline>
 
+      {/* Image preview modal */}
       <AnimatePresence>
         {selectedImg && (
           <motion.div
@@ -129,7 +137,7 @@ const EducationTimeline = () => {
             <motion.img
               src={selectedImg}
               alt="Preview"
-              className="max-w-3xl max-h-[90vh] rounded-lg mt-15"
+              className="w-11/12 sm:max-w-3xl max-h-[90vh] rounded-lg mt-8"
               initial={{ scale: 0.8 }}
               animate={{ scale: 1 }}
               exit={{ scale: 0.8 }}

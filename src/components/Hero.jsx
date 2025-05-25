@@ -60,7 +60,7 @@ const Hero = () => {
           </p>
 
           {/* University Button */}
-          <button className="relative overflow-hidden mt-8 group text-white font-semibold text-lg px-6 py-3 rounded-full bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-blue-600 hover:to-cyan-600 transition-all duration-300 shadow-lg flex items-center justify-center gap-2 mx-auto md:mx-0">
+          <button className="relative overflow-hidden mt-8 group text-white font-semibold text-lg px-6 py-3 rounded-full bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-blue-600 hover:to-cyan-600 transition-all duration-300 shadow-lg flex items-center justify-center gap-2 mx-auto md:mx-0 hover:scale-105">
             <FaGraduationCap className="relative z-10 text-xl" />
             <a
               href="https://www.gre.ac.uk/"
