@@ -10,10 +10,13 @@ import Contact from "./components/Contact";
 import Scrolling from "./components/Scrolling";
 import ScrollingText from "./components/ScrollingText";
 import EducationTimeline from "./components/Edu";
+import CustomCursor from "./components/CustomCursor";
+import SmoothCursor from "./components/SmoothCursor";
 
 function App() {
   return (
     <>
+      <SmoothCursor />
       <Navbar />
       <Hero />
 

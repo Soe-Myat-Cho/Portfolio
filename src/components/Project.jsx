@@ -45,7 +45,9 @@ const Project = () => {
         <h3 className="text-4xl font-bold">
           My <span className="text-cyan-600">Projects</span>
         </h3>
-        <p className="text-gray-400 mt-3 text-lg">My Works</p>
+        <p className="text-gray-400 mt-3 text-lg">
+          Check out my most recent projects
+        </p>
       </div>
       <br />
       <div className="flex justify-center max-w-6xl gap-6 mx-auto items-center relative">

@@ -16,7 +16,7 @@ const techStack = [
   "php",
   "git",
 ];
-
+//cosole.log ("I will go to Paris wiht my lovely girl and keep it quiet and happy for the rest of my life")
 const TechCarousel = () => {
   return (
     <section className="py-10">
